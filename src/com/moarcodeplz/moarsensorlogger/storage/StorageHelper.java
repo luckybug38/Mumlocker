@@ -69,7 +69,7 @@ public class StorageHelper {
 	}
 	
 	public static boolean writeStringToFile(String fileUri, String toWrite) {
-		System.out.println(toWrite);
+		//System.out.println(toWrite);
 		/*
 		try {
 			File curFile = new File(fileUri);

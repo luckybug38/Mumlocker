@@ -1,8 +1,5 @@
 package com.moarcodeplz.moarsensorlogger.activity.fragment;
 
-import java.util.ArrayList;
-
-import com.jjoe64.graphview.BarGraphView;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GraphView.LegendAlign;
 import com.jjoe64.graphview.GraphViewSeries;
@@ -29,7 +26,7 @@ public class GraphFragment extends Fragment{
 	private GraphViewSeries series1;
 	private GraphViewSeries series2;
 	private GraphViewSeries series3;
-	private double graph2LastXValue = 1d;
+	private int graph2LastXValue = 0;
 	private Activity activity;
 
 	/** Called when the activity is first created. */
@@ -58,6 +55,7 @@ public class GraphFragment extends Fragment{
 		series3.getStyle().color = Color.YELLOW;
 		series3.getStyle().thickness = 3;
 		
+
 		graphView = new LineGraphView(activity, "Graph View");
 		graphView.addSeries(series1); 
 		graphView.addSeries(series2);
@@ -67,9 +65,10 @@ public class GraphFragment extends Fragment{
 		graphView.setScrollable(true);
 		graphView.setShowLegend(true);  
 		graphView.setLegendAlign(LegendAlign.BOTTOM);  
-		graphView.setLegendWidth(10);
-
-		graphView.getGraphViewStyle().setNumHorizontalLabels(100);  
+		graphView.setLegendWidth(100);
+		graphView.setViewPort(0, 100);
+		
+		graphView.getGraphViewStyle().setNumHorizontalLabels(10);  
 		graphView.getGraphViewStyle().setHorizontalLabelsColor(Color.BLACK);  
 
 		
@@ -86,11 +85,15 @@ public class GraphFragment extends Fragment{
 					Double src1 = Math.round(Double.parseDouble(write[2])*1000.0)/1000.0;
 					Double src2 = Math.round(Double.parseDouble(write[3])*1000.0)/1000.0;
 					Double src3 = Math.round(Double.parseDouble(write[4])*1000.0)/1000.0;					
-					series1.appendData(new GraphViewData(graph2LastXValue, src1), true, 10);
-					series2.appendData(new GraphViewData(graph2LastXValue, src2), true, 10);
-					series3.appendData(new GraphViewData(graph2LastXValue, src3), true, 10);
+					
+					
+					graph2LastXValue += 1;
+	             
+					series1.appendData(new GraphViewData(graph2LastXValue, src1), true, 100);
+					series2.appendData(new GraphViewData(graph2LastXValue, src2), true, 100);
+					series3.appendData(new GraphViewData(graph2LastXValue, src3), true, 100);
 
-	                graph2LastXValue += 1d;
+	                
 					System.out.println(graph2LastXValue + "\t" + src1 + "\t" + src2 + "\t" + src3);
         	   }
                 mHandler.postDelayed(this, 300);
