@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:id="@+id/mainlayout"
+    android:background="@drawable/btn_black"
+    >
+
+    <Button
+        android:id="@+id/trainingBtn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop = "25dp"
+        android:layout_height="wrap_content"
+		style="@style/ButtonText"
+		android:background="@drawable/btn_red" 
+        android:text="Train the Device" />
+
+    <Button
+        android:id="@+id/munlockerBtn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop = "25dp"
+        style="@style/ButtonText"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue" 
+        android:text="Start MUNLOCKER" />
+    
+    <Button
+        android:id="@+id/sensorBtn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop = "25dp"
+        style="@style/ButtonText"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_yellow" 
+        android:text="Choose sensors" />
+    
+    <Button
+        android:id="@+id/settingBtn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop = "25dp"
+        style="@style/ButtonText"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_green" 
+        android:text="Setting" />
+    
+    <Button
+        android:id="@+id/graphBtn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop = "25dp"
+        style="@style/ButtonText"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_purple" 
+        android:text="Graph" />
+</LinearLayout>

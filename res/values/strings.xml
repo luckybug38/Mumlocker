@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">MainActivity</string>
+    
+    <string name="app_name">MUNLOCKER</string>
+    <string name="EntryActivityLabel">MUMLOCKER</string>
+
+    <!-- Menu strings -->
+    
+    <string name="menu_settings">Settings</string>
+    <string name="menu_dev">Dev</string>
+    <string name="menu_note">Note</string>
+    <string name="menu_quicknote">Quick Note</string>
+    
+    <!-- Preference screen strings -->
+    
+    <string name="prefs_post_url_title">Offload target URL</string>
+    <string name="prefs_post_url_summary">This is the URL that collected data will be submitted to.</string>
+    <string name="prefs_device_id_title">Device ID</string>
+    <string name="prefs_device_id_summary">ID for the device you are using. This is assigned by the server upon the first data offload.</string>
+    <string name="prefs_email_title">Email</string>
+    <string name="prefs_email_summary">The email address that you are registered with the target deployment with.</string>
+    <string name="prefs_password_title">Password</string>
+    <string name="prefs_password_summary">The password for the account you have with the target deployment.</string>
+    
+</resources>

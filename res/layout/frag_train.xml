@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:id="@+id/mainlayout"
+    android:background="@drawable/btn_black"
+    >
+
+    <Button
+        android:id="@+id/start_stop_btn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop = "25dp"
+        android:layout_height="wrap_content"
+		style="@style/ButtonText"
+		android:background="@drawable/btn_purple" 
+        android:text="Start" />
+
+    <TextView 
+        android:id="@+id/traintext"
+        android:textSize="17sp"
+        android:text="Press Start to begin the training."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_margin="20dp"/>
+    
+     <TextView 
+        android:visibility="gone"
+        android:id="@+id/intrain"
+        android:textSize="23sp"
+        android:text="Training "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_margin="20dp"/>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:orderingFromXml="true" android:key="prefHolder">
+    <com.moarcodeplz.moarsensorlogger.preference.BigEditTextPreference android:title="@string/prefs_post_url_title" android:key="targetUrl" android:order="1" android:summary="@string/prefs_post_url_summary" android:defaultValue="https://infs.gatech.edu/smart/smart_proxy.php"/>
+    <com.moarcodeplz.moarsensorlogger.preference.BigEditTextPreference android:title="@string/prefs_email_title" android:key="email" android:order="2" android:summary="@string/prefs_email_summary"/>
+    <com.moarcodeplz.moarsensorlogger.preference.BigEditTextPreference android:title="@string/prefs_password_title" android:key="pw" android:order="2" android:summary="@string/prefs_password_summary"/>
+    <com.moarcodeplz.moarsensorlogger.preference.BigEditTextPreference android:title="@string/prefs_device_id_title" android:key="deviceId" android:order="4" android:summary="@string/prefs_device_id_summary"/>
+</PreferenceScreen>
